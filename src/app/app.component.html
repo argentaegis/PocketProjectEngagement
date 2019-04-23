@@ -1,13 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="#">Pocket Project Engagement</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLink="/page1">Page 1 <span class="sr-only">(current)</span></a>
-    </div>
-  </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Pocket Project Engagement</a>
 </nav>
 
+<div class="container">
+  <br/>
+  <div class="jumbotron">
+    <form [formGroup]="peForm">
+      <label for="selectCO">Select CO</label>
+      <select class="form-control" id="selectCO" (change)="coChanged()">
+        <option *ngFor="let x of coList"
+                [ngValue]="x">{{ x.name }}</option>
+      </select>
+    </form>
+  </div>
+</div>
 <router-outlet></router-outlet>
