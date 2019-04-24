@@ -1,0 +1,9 @@
+<label for="selectWorkItem">Select Finish</label>
+<div class="form-inline d-flex justify-content-between">
+  <select class="form-control form-control-lg col-2" id="selectWorkItem"
+          (change)="finishChanged()"
+          [formControl]="finishSelect">
+    <option *ngFor="let x of finishes"
+            [ngValue]="x">{{ x.name }}</option>
+  </select>
+</div>

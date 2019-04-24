@@ -1,0 +1,25 @@
+<div class="container">
+  <br/>
+  <div class="jumbotron">
+      <label for="selectCO">Select CO</label>
+      <select class="form-control form-control-lg" id="selectCO"
+              (change)="coChanged()"
+              [formControl]="selectCO">
+        <option *ngFor="let x of coList"
+                [ngValue]="x">{{ x.name }}</option>
+      </select>
+      <br/>
+
+      <label for="selectWorkItem">Select Work Items</label>
+      <div class="form-inline d-flex justify-content-between">
+        <select class="form-control form-control-lg col-9 " id="selectWorkItem"
+                (change)="workItemChanged()"
+                [formControl]="selectWorkItem">
+          <option *ngFor="let x of workItems"
+                  [ngValue]="x">{{ x.name }}</option>
+        </select>
+        <button type="button" class="btn btn-primary col-2" (click)="addWorkItem()">Add</button>
+      </div>
+  </div>
+  <app-work-item-list [engagementWorkItems]="engagementWorkItems"></app-work-item-list>
+</div>

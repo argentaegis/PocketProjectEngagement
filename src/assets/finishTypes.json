@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "name": "Cheap",
+      "requirements": [
+        "Don't screw up"
+      ]
+    },
+    {
+      "name": "Basic",
+      "requirements": [
+        "Don't screw up",
+        "No loose nails"
+      ]
+    },
+    {
+      "name": "Fine",
+      "requirements": [
+        "Don't screw up",
+        "Golden Fleece Rugs"
+      ]
+    }
+  ]
+}
